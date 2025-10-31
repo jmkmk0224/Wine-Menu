@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wine Menu</title>
+<style>
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f9f4f1;
+    color: #4b3c2a;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+header h1 {
+    font-size: 5rem;
+    color: #8b0000;
+    margin-bottom: 10px;
+}
+header p {
+    font-size: 1.2rem;
+    color: #5a4033;
+}
+
+/* Wine Menu Layout */
+.wine-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Wine Card */
+.wine-card {
+    background: rgba(255, 255, 255, 0.15); /* translucent white */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* subtle frosty border */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* soft depth */
+    backdrop-filter: blur(12px); /* main glass blur */
+    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: #fff; /* white text for readability */
+}
+
+.wine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+/* Category Headings */
+.wine-card h4 {
+    color: #6b0f0f;
+    /*margin-bottom: 10px;*/
+}
+
+/* Wine Table */
+.wine-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+/*.wine-table td {
+    padding: 6px 10px;
+}*/
+.wine-table .name {
+    padding-right: 30px;
+    flex: 2;
+    color: #6b0f0f;
+}
+.wine-table .price {
+    text-align: right;
+    color: #6b0f0f;
+}
+.wine-table .price::before {
+    content: "Rs ";
+}
+
+img {
+    padding: 30px;
+}
+
+.ufo {
+    color: #ffcc00;
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* TEXT */
+.text-overlay {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+.glass {
+      width: 300px;
+      height: 200px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 1.2rem;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    header h1 { font-size: 2rem; }
+    header p { font-size: 1rem; }
+    .wine-card { padding: 15px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Wine Menu</h1>
+    <p class="ufo">Cafe ufo</p>
+</header>
+<!-- TEXT -->
+<div class="text-overlay">
+  <span class="bottom-text">WINE</span>
+  <span class="top-text">WINE</span>
+</div>
+
+<div class="wine-menu">
+    <!-- 1st column -->
+    <!-- Champagne Rose -->
+    <div class="wine-card">
+        <h4>CHAMPAGNE ROSE</h4>
+        <table class="wine-table">
+            <tr><td class="name">Laurent Perrier Rose</td><td class="price">109000</td></tr>
+            <tr><td class="name">Taittinger Prestige Rose Brut</td><td class="price">57900</td></tr>
+        </table>
+   
+
+    <!-- Champagne -->
+    
+        <h4>CHAMPAGNE</h4>
+        <table class="wine-table">
+            <tr><td class="name">Veuve Clicquot Yellow Label Brut</td><td class="price">69000</td></tr>
+        </table>
+    
+
+    <!-- Sparkling Wine -->
+    
+        <h4>SPARKLING WINE</h4>
+        <table class="wine-table">
+            <tr><td class="name">Bottega Prosecco D.O.C</td><td class="price">16500</td></tr>
+            <tr><td class="name">Leonardo Da Vinci Prosecco</td><td class="price">13750</td></tr>
+            <tr><td class="name">Charles De Fere Blanc De Blanc Brut</td><td class="price">13750</td></tr>
+            <tr><td class="name">Santero EGOS Brut</td><td class="price">13350</td></tr>
+            <tr><td class="name">Cavalieri Reali Prosecco</td><td class="price">12150</td></tr>
+            <tr><td class="name">Passion Pop</td><td class="price">10900</td></tr>
+            <tr><td class="name">Conte Fosco Cuvee Brut</td><td class="price">10900</td></tr>
+            <tr><td class="name">VM Kramer Brut</td><td class="price">9200</td></tr>
+        </table>
+    
+
+    <!-- Rose Wine -->
+   
+        <h4>ROSE WINE</h4>
+        <table class="wine-table">
+            <tr><td class="name">Whispering Angel</td><td class="price">28500</td></tr>
+            <tr><td class="name">Miraval Rose</td><td class="price">23900</td></tr>
+            <tr><td class="name">Minuty Rose</td><td class="price">23000</td></tr>
+            <tr><td class="name">Barton & Guestier Wine</td><td class="price">18380</td></tr>
+            <tr><td class="name">J. Moreau & Fils Rose D’Anjou</td><td class="price">16500</td></tr>
+            <tr><td class="name">Bottega Pinot Grigio Rose</td><td class="price">13750</td></tr>
+            <tr><td class="name">False Bay Rose</td><td class="price">12500</td></tr>
+            <tr><td class="name">Chemin Des Bales Rose D’Anjou Sauvignon</td><td class="price">11880</td></tr>
+            <tr><td class="name">Santa Alicia Rose</td><td class="price">7900</td></tr>
+        </table>
+    
+
+    <!-- Italy White Wine -->
+ 
+        <h4>ITALY WHITE WINE</h4>
+        <table class="wine-table">
+            <tr><td class="name">Danzante Pinot Grigio</td><td class="price">14900</td></tr>
+            <tr><td class="name">Bottega Sauvignon</td><td class="price">12500</td></tr>
+            <tr><td class="name">Piccini Orvieto Classico DOC</td><td class="price">10900</td></tr>
+            <tr><td class="name">Cavalieri Reali Pinot Grigio</td><td class="price">10900</td></tr>
+            <tr><td class="name">Piccini Pinot Grigio Delle Venezie D.O.C</td><td class="price">9750</td></tr>
+        </table>
+    
+
+    <!-- Italy Red Wine-->
+    
+        <h4>ITALY RED WINE</h4>
+        <table class="wine-table">
+            <tr><td class="name">Bottega Merlot Trevenezie</td><td class="price">13390</td></tr>
+            <tr><td class="name">Villa Cardini Valpolicella</td><td class="price">13000</td></tr>
+            <tr><td class="name">Montepulciano D’Abruzzo</td><td class="price">10900</td></tr>
+            <tr><td class="name">E Got Merlot Sangiovese</td><td class="price">10900</td></tr>
+            <tr><td class="name">Piccini Chianti DOCG</td><td class="price">11250</td></tr>
+        </table>
+
+    </div>
+    <!-- 2nd column-->
+    <div class="wine-card">
+        <h4>FRANCE WHITE WINE</h4>
+        <table class="wine-table">
+            <tr><td class="name">Hugel Riesling</td><td class="price">25500</td></tr>
+            <tr><td class="name">Hugel Gewurztraminer</td><td class="price">23750</td></tr>
+            <tr><td class="name">Barton & Guestier Sauvignon Blanc</td><td class="price">13000</td></tr>
+            <tr><td class="name">Marius White IGP</td><td class="price">12000</td></tr>
+        </table>
+
+        <h4>FRANCE RED WINE</h4>
+        <table class="wine-table">
+            <tr><td class="name">Chateauneuf Du Pape</td><td class="price">39900</td></tr>
+            <tr><td class="name">Medoc Cuvee</td><td class="price">19500</td></tr>
+            <tr><td class="name">Cuvee Sabourin Malbec</td><td class="price">12250</td></tr>
+        </table>
+
+        <img src="Wine Menu Pic1.png" alt="wmp" width="100%" height="80%">
+
+    </div>
+    <!-- 3rd column-->
+    <div class="wine-card">
+        <h4>AUSTRALIAN WHITE WINE</h4>
+        <table class="wine-table">
+            <tr><td class="name">Warburn Sauvignon Blanc</td><td class="price">13000</td></tr>
+            <tr><td class="name">Warburn Pinto Grigio</td><td class="price">13000</td></tr>
+            <tr><td class="name">Banrock Sauvignon Blanc</td><td class="price">11500</td></tr>
+            <tr><td class="name">DB Traminer Riesling</td><td class="price">9900</td></tr>
+            <tr><td class="name">The Drover Sauvignon Blanc</td><td class="price">7900</td></tr>
+        </table>
+
+        <h4>AUSTRALIAN RED WINE</h4>
+        <table class="wine-table">
+            <tr><td class="name">Rosemount Bleds Shiraz Cabernet</td><td class="price">13190</td></tr>
+            <tr><td class="name">D’Arenberg Stump Jump Shiraz</td><td class="price">13000</td></tr>
+            <tr><td class="name">Warburn Cabernet Sauvignon</td><td class="price">13000</td></tr>
+            <tr><td class="name">VIVO Shiraz</td><td class="price">12000</td></tr>
+            <tr><td class="name">Banrock Cabernet Merlot</td><td class="price">11500</td></tr>
+            <tr><td class="name">Gossips Merlot</td><td class="price">10900</td></tr>
+            <tr><td class="name">The Drover Merlot</td><td class="price">7900</td></tr>
+        </table>
+
+        <h4>CHILE WHITE WINE</h4>
+        <table class="wine-table">
+            <tr><td class="name">Cono Sur Reserva Sauvignon Blanc</td><td class="price">17750</td></tr>
+            <tr><td class="name">Valdivieso Sauvignon Blanc</td><td class="price">10900</td></tr>
+            <tr><td class="name">Cono Sur Tocornal Sauvignon Blanc</td><td class="price">9500</td></tr>
+            <tr><td class="name">Ochagavia Chardonnay</td><td class="price">8500</td></tr>
+            <tr><td class="name">Paraiso Sauvignon Blanc</td><td class="price">7900</td></tr>
+            <tr><td class="name">Santa Alicia Chardony</td><td class="price">7900</td></tr>
+            <tr><td class="name">Santa Alicia Sauvignon Blanc</td><td class="price">7900</td></tr>
+        </table>
+
+        <h4>CHILE RED WINE</h4>
+        <table class="wine-table">
+            <tr><td class="name">Casillero Del Diablo Merlot</td><td class="price">17750</td></tr>
+            <tr><td class="name">Casillero Del Diablo Cabernet Sauvignon</td><td class="price">15750</td></tr>
+            <tr><td class="name">Inspiria Carmenere Reserva</td><td class="price">11000</td></tr>
+            <tr><td class="name">Santa Alicia Pinot Noir</td><td class="price">10900</td></tr>
+            <tr><td class="name">Santa Alicia Cabernet Sauvignon</td><td class="price">7900</td></tr>
+            <tr><td class="name">Santa Alicia Merlot</td><td class="price">7900</td></tr>
+        </table>
+
+        <h4>SOUTH AFRICA WHITE WINE</h4>
+        <table class="wine-table">
+            <tr><td class="name">False Bay Chardonnay</td><td class="price">18850</td></tr>
+            <tr><td class="name">Tall Horse Sauvignon Blanc</td><td class="price">9900</td></tr>
+            <tr><td class="name">Tall Horse Chardonnay</td><td class="price">9900</td></tr>
+        </table>
+
+        <h4>SOUTH AFRICA RED WINE</h4>
+        <table class="wine-table">
+            <tr><td class="name">KWV Classic Pinotage</td><td class="price">10900</td></tr>
+            <tr><td class="name">Foot Print Merlot</td><td class="price">9900</td></tr>
+            <tr><td class="name">Tall Horse Pinotage</td><td class="price">9900</td></tr>
+            <tr><td class="name">Petit Roizer Cape Red</td><td class="price">7900</td></tr>
+        </table>
+
+    </div>
+
+
+
+</div>
+
+
+
+</body>
+</html>
